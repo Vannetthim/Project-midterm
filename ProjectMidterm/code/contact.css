@@ -1,0 +1,162 @@
+
+/* ជួរកូដដាក់រូបភាព Background ធំពេញអេក្រង់ដូចទំព័រ About និង Home */
+.contact-page-hero {
+    background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80'); /* រូបភាពសាច់អាំង */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* ផ្ទាំងងងឹតថ្លាៗគ្របពីលើ */
+.contact-page-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.75); /* ងងឹត ៧៥% */
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+/* Container រៀបចំ Layout ឆ្វេង-ស្តាំ */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* បែងចែកជា ២ចំណែកស្មើគ្នា */
+    gap: 60px;
+    align-items: center;
+}
+
+/* ផ្នែកព័ត៌មានខាងឆ្វេង */
+.contact-heading h1 {
+    font-size: 2.5rem;
+    color: #ff4081; /* ពណ៌ផ្កាឈូកលេចធ្លោ */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.contact-heading p {
+    color: #ffffff;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+}
+
+.info-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.info-icon {
+    font-size: 2.2rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    color: #ff4081;
+    margin: 0 0 5px 0;
+    font-size: 1.15rem;
+}
+
+.info-text p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ផ្នែកប្រអប់ Form ខាងស្តាំ */
+.form-box {
+    background: rgba(255, 255, 255, 0.08); /* ប្រអប់សថ្លាៗអណ្តែត */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.form-box h2 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+    background: rgba(255, 255, 255, 0.9); /* ប្រអប់បញ្ចូលពណ៌សភ្លឺងាយស្រួលវាយ */
+    border: none;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.5); /* ភ្លឺជុំវិញពេលចុចវាយ */
+}
+
+/* ប៊ូតុងផ្ញើសារ */
+.btn-submit-form {
+    width: 100%;
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit-form:hover {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* Responsive សម្រាប់ទូរស័ព្ទដៃ */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* ប្តូរមកជួរទោល រត់ចុះក្រោមវិញ */
+        gap: 40px;
+    }
+    .form-box {
+        padding: 25px;
+    }
+}
