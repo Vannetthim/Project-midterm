@@ -391,19 +391,6 @@ html, body {
     transform: scale(1.1); /* ធ្វើឱ្យរូបភាព zoom ធំបន្តិច */
 }
 
-/* បណ្តែត Emoji នៅលើជ្រុងខាងឆ្វេងនៃរូបភាព */
-.card-emoji {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 5px 8px;
-    border-radius: 50%;
-    font-size: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 10;
-}
-
 /* សម្រាប់ករណីប្រើប្រាស់ Emoji ជំនួសរូបភាព */
 .card-img {
     height: 200px;
