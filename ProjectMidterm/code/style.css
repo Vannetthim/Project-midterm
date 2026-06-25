@@ -1,6 +1,4 @@
-/* ==========================================================================
-   ១. កំណត់ទម្រង់ទូទៅ (Reset & Base Styles)
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,19 +16,14 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* ការពារមិនឱ្យធ្លាយគែមសខាងស្តាំ */
+    overflow-x: hidden;
 }
-
-
-/* ==========================================================================
-   ២. របារម៉ឺនុយខាងលើ (Navbar Styles)
-   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50; /* រក្សាពណ៌ខៀវប្រផេះងងឹតដដែល */
-    padding: 15px 30px;        /* 🛠️ ដូរពី 10% មកត្រឹម 30px ដើម្បីឱ្យរត់ទៅកៀនសងខាងស្អាត */
+    background-color: #2c3e50; 
+    padding: 15px 30px;        
     position: sticky;
     top: 0;
     z-index: 100;
@@ -49,11 +42,11 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: auto; /* 🛠️ ជួរកូដសំខាន់បំផុត៖ រុញម៉ឺនុយទាំងអស់ទៅកៀនខាងស្តាំដៃ */
+    margin-left: auto; 
 }
 
 .nav-links li {
-    margin-left: 10px; /* បន្ថយគម្លាតបន្តិចដើម្បីកុំឱ្យធ្លាក់ជួរ */
+    margin-left: 10px;
 }
 
 .nav-links a {
@@ -66,25 +59,23 @@ html, body {
     display: inline-block;
 }
 
-/* 🛠️ កែសម្រួល៖ រក្សាពណ៌អក្សរសធម្មតានៅពេលដែលអ្នកប្រើប្រាស់ Hover */
+
 .nav-links a:hover {
     color: #ffffff;
 }
 
-/* 🛠️ បង្កើត Class ពិសេសសម្រាប់ប៊ូតុងសកម្ម (Active) ឡើងប្រអប់ពណ៌ទឹកក្រូច */
 .nav-links a.active-orange {
-    background-color: #e67e22; /* ពណ៌ទឹកក្រូចដិតស្អាតដូចប៊ូតុង Food */
-    color: #ffffff !important;  /* រក្សាអក្សរពណ៌ស */
+    background-color: #e67e22; 
+    color: #ffffff !important;
     font-weight: bold;
 }
 
-/* ប៊ូតុងចូលប្រើប្រាស់ / ចុះឈ្មោះ (Auth) នៅខាងស្តាំបង្អស់ */
 .nav-auth {
     margin-left: 25px;
 }
 
 .btn-nav-auth {
-    background-color: #27ae60; /* កែសម្រួល៖ ប្រើពណ៌បៃតងស្មៅ #4caf50 */
+    background-color: #27ae60; 
     color: white;
     padding: 8px 16px;
     text-decoration: none;
@@ -93,7 +84,6 @@ html, body {
     display: inline-block;
 }
 
-/* ប៊ូតុង Login នៅលើ Navbar */
 .btn-login {
     background-color: #27ae60;
     color: white !important;
@@ -106,28 +96,24 @@ html, body {
     background-color: #4caf50 !important;
 }
 
-/* ==========================================================================
-   ប្រព័ន្ធកាតទិញទំនិញ (Cart UI Style - Moved to Right)
-   ========================================================================== */
 .cart-icon {
     background-color: #e67e22;
     color: white !important;
-    width: 70px;          /* រក្សាទំហំធំរបស់អ្នកដដែល */
-    height: 70px;         /* រក្សាទំហំធំរបស់អ្នកដដែល */
-    border-radius: 50%;   /* រង្វង់មូលស្អាត */
+    width: 70px;          
+    height: 70px;         
+    border-radius: 50%;   
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;    /* សម្រាប់បណ្តែតលេខរាប់ */
+    position: relative;    
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     
-    /* 🛠️ បន្ថែមកូដ ២ ជួរនេះ ដើម្បីរុញប៊ូតុង Cart ទៅខាងស្តាំដៃបង្អស់ */
     margin-left: 90%;
     margin-top: 20px;  
     margin-bottom: -80px;   
-    order: 2;             /* ធានាថាវានៅខាងស្តាំបន្ទាប់ពី Nav-links */
+    order: 2;           
 }
 
 .cart-icon:hover {
@@ -135,36 +121,30 @@ html, body {
     transform: scale(1.05);
 }
 
-/* រូប Emoji 🛒 នៅក្នុងកាត */
+
 .cart-icon span:first-child {
     font-size: 30px;
     line-height: 1;
 }
-
-/* លេខបង្ហាញចំនួនទំនិញ (បណ្តែតនៅជ្រុងខាងស្តាំលើ) */
 .cart-count {
     position: absolute;
-    /* 🛠️ កែសម្រួលទីតាំង Top & Right ឱ្យសមល្មមនឹងរង្វង់មូលទំហំ 70px */
     top: 5px;             
     right: 5px;           
     background-color: #e74c3c; 
     color: white !important;
-    font-size: 14px;      /* បង្កើនទំហំអក្សរលេខបន្តិចឱ្យសមនឹងប៊ូតុងធំ */
+    font-size: 14px;      
     font-weight: bold;
-    min-width: 22px;      /* បង្កើនទំហំរង្វង់លេខបន្តិច */
+    min-width: 22px;      
     height: 22px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2px;
-    border: 2px solid #e67e22; /* 🛠️ ប្តូរពណ៌គែមឱ្យស៊ីជាមួយប៊ូតុង Cart ពណ៌ទឹកក្រូច */
+    border: 2px solid #e67e22;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* ==========================================================================
-   ៣. ផ្នែកទំព័រដើម (Home Page Style - Hero Blur Overlay)
-   ========================================================================== */
 .hero-section {
     background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80');
     background-size: cover;
@@ -179,7 +159,7 @@ html, body {
 .hero-overlay {
     width: 100%;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.75); /* បន្ថែមភាពងងឹត ៧៥% ដើម្បីឱ្យអក្សរសៗមើលឃើញច្បាស់ល្អ */
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -189,7 +169,7 @@ html, body {
 
 .hero-content {
     width: 100%;
-    max-width: 850px; /* បង្រួមទទឹងឱ្យសមល្មមនឹងការរៀបចុះក្រោម */
+    max-width: 850px; 
     text-align: center;
 }
 
@@ -211,7 +191,6 @@ html, body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* ប៊ូតុងមើលមុខម្ហូបឥឡូវនេះ */
 .btn-hero-action {
     display: inline-block;
     background-color: #e91e63;
@@ -230,34 +209,32 @@ html, body {
     transform: translateY(-2px);
 }
 
-/* រៀបចំបញ្ជីកាតឱ្យរត់ចុះក្រោម (Row list) */
 .categories-list {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* គម្លាតពីកាតមួយទៅកាតមួយ */
+    gap: 30px; 
     width: 100%;
 }
 
-/* រចនាកាតឱ្យមានលក្ខណៈថ្លា (Transparent) គ្មានផ្ទៃពណ៌ស */
 .category-transparent-row {
     display: flex;
     align-items: center;
-    text-align: left; /* ឱ្យអក្សររត់ទៅខាងឆ្វេងស្អាត */
-    background: rgba(255, 255, 255, 0.06); /* ប្រើពណ៌សថ្លាៗ ៦% ដើម្បីគ្រាន់តែដឹងព្រំដែនកាត */
+    text-align: left; 
+    background: rgba(255, 255, 255, 0.06); 
     padding: 25px 30px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15); /* ខ្សែបន្ទាត់គែមថ្លាៗ */
+    border: 1px solid rgba(255, 255, 255, 0.15); 
     transition: all 0.3s ease;
 }
 
 .category-transparent-row:hover {
-    background: rgba(255, 255, 255, 0.12); /* ភ្លឺច្បាស់ជាងមុនបន្តិចពេល hover */
-    transform: translateX(5px); /* រំកិលទៅខាងស្តាំបន្តិចពេលយកម៉ៅស៍ដាក់ពីលើ */
+    background: rgba(255, 255, 255, 0.12); 
+    transform: translateX(5px);
 }
 
 .card-icon {
     font-size: 3.5rem;
-    margin-right: 25px; /* ដកឃ្លាចេញពីអក្សរ */
+    margin-right: 25px;
     flex-shrink: 0;
 }
 
@@ -273,13 +250,12 @@ html, body {
 }
 
 .category-transparent-row p {
-    color: #dddddd; /* ពណ៌សប្រផេះងាយស្រួលអាន */
+    color: #dddddd;
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0 0 12px 0;
 }
 
-/* រចនាប៊ូតុង Link ពណ៌ផ្កាឈូកថ្លា */
 .card-link-transparent {
     color: #ff4081;
     font-weight: bold;
@@ -295,9 +271,6 @@ html, body {
 }
 
 
-/* ==========================================================================
-   ៤. ផ្នែកខាងលើនៃទំព័រម្ហូប និងភេសជ្ជៈ (Hero Sections - Food & Drink)
-   ========================================================================== */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -317,10 +290,6 @@ html, body {
     margin-bottom: 10px;
 }
 
-
-/* ==========================================================================
-   ៥. ប្លង់មាតិកា និងកាតបង្ហាញមុខម្ហូប (Container & Menu Card Styles)
-   ========================================================================== */
 .container {
     max-width: 2000px;
     margin: 40px auto;
@@ -348,14 +317,12 @@ html, body {
     transform: translateX(-50%);
 }
 
-/* ការរៀបចំកាតមុខម្ហូប/ភេសជ្ជៈ (Grid Layout ៣ ជួរ) */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
 }
 
-/* កាត (Card Style) */
 .menu-card {
     background-color: #fff;
     border-radius: 10px;
@@ -369,36 +336,32 @@ html, body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* ប្រអប់ផ្ទុករូបភាព */
 .card-img-container {
     height: 200px;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #eaeaea; /* ពណ៌ផ្ទៃក្រោយពេលរូបភាពកំពុង Load */
+    background-color: #eaeaea;
 }
 
-/* រៀបចំរូបភាពដែលទាញចេញពី Link src */
 .card-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* ជួយឱ្យរូបភាពមិនរីក ឬរួមញ៉ីញ៉ៃ */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
-/* បន្ថែម Effect ពេលព្រួញកណ្តុរដើរចំ (Hover Effect) */
 .menu-card:hover .card-img-container img {
-    transform: scale(1.1); /* ធ្វើឱ្យរូបភាព zoom ធំបន្តិច */
+    transform: scale(1.1);
 }
 
-/* សម្រាប់ករណីប្រើប្រាស់ Emoji ជំនួសរូបភាព */
 .card-img {
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 60px; /* ធ្វើឱ្យ Emoji ម្ហូប និងភេសជ្ជៈមើលទៅធំស្អាត */
+    font-size: 60px; 
     font-weight: bold;
     user-select: none;
 }
@@ -448,10 +411,6 @@ html, body {
     background-color: #d35400;
 }
 
-
-/* ==========================================================================
-   ៦. ទំព័រផ្ទៀងផ្ទាត់គណនី (Auth Page - Login / Sign Up Forms)
-   ========================================================================== */
 .auth-wrapper {
     display: flex;
     justify-content: center;
@@ -505,7 +464,6 @@ html, body {
     padding-left: 5px;
 }
 
-/* ក្រុមប៊ូតុង Social Login (Facebook, Google, Apple) */
 .social-login-group {
     display: flex;
     flex-direction: column;
@@ -553,7 +511,6 @@ html, body {
     object-fit: contain;
 }
 
-/* បន្ទាត់ខណ្ឌ "or" */
 .divider {
     display: flex;
     align-items: center;
@@ -571,7 +528,6 @@ html, body {
 .divider:not(:empty)::before { margin-right: .5em; }
 .divider:not(:empty)::after { margin-left: .5em; }
 
-/* ក្រុមប៊ូតុងសកម្មភាពចម្បង (Log In / Sign Up) */
 .action-group {
     display: flex;
     flex-direction: column;
@@ -624,10 +580,6 @@ html, body {
     text-decoration: underline;
 }
 
-
-/* ==========================================================================
-   ៧. ផ្នែកខាងក្រោមបង្អស់ (Footer Style)
-   ========================================================================== */
 footer {
     background-color: #2c3e50;
     color: #fff;
@@ -635,18 +587,14 @@ footer {
     padding: 20px;
 }
 
-
-/* ==========================================================================
-   ៨. ប្លង់ឆ្លើយតបតាមទំហំអេក្រង់ (Responsive Design / Media Queries)
-   ========================================================================== */
 @media (max-width: 900px) {
     .menu-grid {
-        grid-template-columns: repeat(2, 1fr); /* លើ Tablet ចេញ ២ ជួរ */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .menu-grid {
-        grid-template-columns: 1fr; /* លើទូរស័ព្ទដៃចេញ ១ ជួររត់ចុះក្រោម */
+        grid-template-columns: 1fr; 
     }
 }

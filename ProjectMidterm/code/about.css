@@ -1,26 +1,23 @@
 
-/* 🛠️ ជួរកូដដាក់រូបភាព Background ធំពេញអេក្រង់ដូចទំព័រដើម */
 .about-page-hero {
     background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80'); /* រូបភាពសាច់អាំងដូច Home Page */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* រក្សារូបភាពឱ្យនៅនឹងថ្កល់ដដែល */
+    background-attachment: fixed; 
     min-height: 100vh;
     width: 100%;
     position: relative;
 }
 
-/* 🛠️ ផ្ទាំងងងឹតថ្លាៗគ្របពីលើ ដើម្បីឱ្យអក្សរលេចធ្លោ */
 .about-page-overlay {
     width: 100%;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.75); /* ងងឹត ៧៥% */
+    background: rgba(0, 0, 0, 0.75);
     padding: 60px 0;
     box-sizing: border-box;
 }
 
-/* Container រៀបចំ Layout ឆ្វេង-ស្តាំ */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,7 +32,6 @@
     margin-bottom: 40px;
 }
 
-/* ចំណងជើងពណ៌ផ្កាឈូកលេចធ្លោ */
 .info-block h2 {
     font-size: 1.8rem;
     color: #ff4081; 
@@ -43,7 +39,6 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* 🛠️ ប្តូរអត្ថបទរៀបរាប់មកជាពណ៌សវិញ */
 .info-block p {
     color: #ffffff; 
     line-height: 1.8;
@@ -52,14 +47,13 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* ផ្នែកកាតចុងភៅខាងស្តាំ */
 .chef-profile-section {
     display: flex;
     justify-content: center;
 }
 
 .chef-card {
-    background: rgba(255, 255, 255, 0.08); /* ប្រើប្រអប់សថ្លាៗអណ្តែត */
+    background: rgba(255, 255, 255, 0.08); 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     overflow: hidden;
@@ -89,14 +83,11 @@
     margin-bottom: 8px;
 }
 
-/* 🛠️ ឈ្មោះចុងភៅពណ៌ស */
 .chef-info h3 {
     font-size: 1.4rem;
     color: #ffffff; 
     margin: 0 0 12px 0;
 }
-
-/* 🛠️ ពាក្យស្លោកពណ៌សប្រផេះទន់ភ្នែក */
 .chef-quote {
     font-size: 0.95rem;
     color: #dddddd; 
@@ -105,7 +96,6 @@
     margin: 0;
 }
 
-/* Responsive សម្រាប់ទូរស័ព្ទដៃ */
 @media (max-width: 900px) {
     .about-container {
         grid-template-columns: 1fr;

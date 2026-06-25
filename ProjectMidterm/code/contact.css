@@ -1,7 +1,5 @@
-
-/* ជួរកូដដាក់រូបភាព Background ធំពេញអេក្រង់ដូចទំព័រ About និង Home */
 .contact-page-hero {
-    background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80'); /* រូបភាពសាច់អាំង */
+    background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,30 +9,27 @@
     position: relative;
 }
 
-/* ផ្ទាំងងងឹតថ្លាៗគ្របពីលើ */
 .contact-page-overlay {
     width: 100%;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.75); /* ងងឹត ៧៥% */
+    background: rgba(0, 0, 0, 0.75);
     padding: 60px 0;
     box-sizing: border-box;
 }
 
-/* Container រៀបចំ Layout ឆ្វេង-ស្តាំ */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* បែងចែកជា ២ចំណែកស្មើគ្នា */
+    grid-template-columns: 1fr 1fr; 
     gap: 60px;
     align-items: center;
 }
 
-/* ផ្នែកព័ត៌មានខាងឆ្វេង */
 .contact-heading h1 {
     font-size: 2.5rem;
-    color: #ff4081; /* ពណ៌ផ្កាឈូកលេចធ្លោ */
+    color: #ff4081; 
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -80,9 +75,8 @@
     line-height: 1.5;
 }
 
-/* ផ្នែកប្រអប់ Form ខាងស្តាំ */
 .form-box {
-    background: rgba(255, 255, 255, 0.08); /* ប្រអប់សថ្លាៗអណ្តែត */
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     padding: 40px;
@@ -113,7 +107,7 @@
 
 .input-group input,
 .input-group textarea {
-    background: rgba(255, 255, 255, 0.9); /* ប្រអប់បញ្ចូលពណ៌សភ្លឺងាយស្រួលវាយ */
+    background: rgba(255, 255, 255, 0.9); 
     border: none;
     padding: 12px 15px;
     font-size: 1rem;
@@ -126,10 +120,9 @@
 .input-group input:focus,
 .input-group textarea:focus {
     background: #ffffff;
-    box-shadow: 0 0 8px rgba(255, 64, 129, 0.5); /* ភ្លឺជុំវិញពេលចុចវាយ */
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.5); 
 }
 
-/* ប៊ូតុងផ្ញើសារ */
 .btn-submit-form {
     width: 100%;
     background-color: #ff4081;
@@ -149,11 +142,9 @@
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
 }
-
-/* Responsive សម្រាប់ទូរស័ព្ទដៃ */
 @media (max-width: 900px) {
     .contact-container {
-        grid-template-columns: 1fr; /* ប្តូរមកជួរទោល រត់ចុះក្រោមវិញ */
+        grid-template-columns: 1fr; 
         gap: 40px;
     }
     .form-box {
