@@ -605,36 +605,17 @@ footer {
     }
 }
 
-/* ========= Navbar Responsive ========= */
+.mobile-menu{
+    display:none;
+}
 
 @media (max-width:768px){
 
-    .navbar{
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .logo{
-        margin-bottom: 15px;
-        text-align: center;
+    .mobile-menu{
+        display:block;
     }
 
     .nav-links{
-        flex-direction: column;
-        width: 100%;
-        margin-left: 0;
-        align-items: center;
+        display:none;
     }
-
-    .nav-links li{
-        margin: 6px 0;
-        width: 100%;
-    }
-
-    .nav-links a{
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
 }
